@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Mvvm3"
+             x:Class="Mvvm3.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" 
+                 Padding="20,0,20,0" Spacing="15">
+        <!-- Place new controls here -->
+        <Label Text="Person Name"/>
+        <Entry Text="{Binding PersonName}" Placeholder="Full Name"/>
+
+        <Label Text="Works in"/>
+        <Entry Text="{Binding WorksIn}" Placeholder="Ur Website" />
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Save Data?"/>
+            <Switch IsToggled="{Binding MySwitch}"/>
+        </StackLayout>
+
+        <Label Text="{Binding ShowMessage}"/>
+    </StackLayout>
+
+</ContentPage>
