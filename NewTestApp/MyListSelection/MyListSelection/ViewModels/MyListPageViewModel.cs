@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MyListSelection.ViewModels
 {
-    class MyListPageViewModel
+    public class MyListPageViewModel
     {
         public ObservableCollection<MyListModel> FoodList { get; set; }
         public MyListPageViewModel()

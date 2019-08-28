@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyListSelection.Models
 {
-    class MyListModel
+    public class MyListModel
     {
         public string Name { get; set; }
         public string Detail { get; set; }
