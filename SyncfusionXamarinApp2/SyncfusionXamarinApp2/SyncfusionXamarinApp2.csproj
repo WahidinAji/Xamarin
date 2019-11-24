@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="Models\MonthDemand.cs" />
+    <Compile Remove="Models\Person.cs" />
+    <Compile Remove="Models\PieChartModels.cs" />
+    <Compile Remove="ViewModels\DataModel.cs" />
+    <Compile Remove="ViewModels\PersonVM.cs" />
+    <Compile Remove="ViewModels\PieChartVM.cs" />
+    <Compile Remove="Views\Page1.xaml.cs" />
+    <Compile Remove="Views\Page2.xaml.cs" />
+    <Compile Remove="Views\PieChartTross.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MainPage.xaml" />
+    <EmbeddedResource Remove="Views\Page1.xaml" />
+    <EmbeddedResource Remove="Views\Page2.xaml" />
+    <EmbeddedResource Remove="Views\PieChartTross.xaml" />
+  </ItemGroup>
+
+<ItemGroup>
+<PackageReference Include="Syncfusion.Xamarin.Compression" Version="17.3.0.28" />
+<PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+<PackageReference Include="Syncfusion.Xamarin.SfSunburstChart" Version="17.3.0.26" />
+<PackageReference Include="Syncfusion.Xamarin.OfficeChart" Version="17.3.0.26" />
+<PackageReference Include="Syncfusion.Xamarin.SfChart" Version="17.3.0.26" />
+</ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ChartSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
