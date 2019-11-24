@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             mc:Ignorable="d"
+             x:Class="SyncfusionXamarinApp2.Views.PieChartTross">
+    <StackLayout Margin="15">
+        <chart:SfChart>
+            <chart:PieSeries EnableAnimation="True" ItemsSource="{Binding Data}" 
+                             XBindingPath="Name" YBindingPath="Quantity" EnableTooltip="True">
+                <chart:PieSeries.DataMarker>
+                    <chart:ChartDataMarker LabelContent="Percentage">
+                        <chart:ChartDataMarker.LabelStyle>
+                            <chart:DataMarkerLabelStyle Font="Bold,14" LabelPosition="Auto"/>
+                        </chart:ChartDataMarker.LabelStyle>
+                    </chart:ChartDataMarker>
+                </chart:PieSeries.DataMarker>
+
+                <chart:PieSeries.ColorModel>
+                    <chart:ChartColorModel Palette="Custom">
+                        <chart:ChartColorModel.CustomBrushes>
+                            <Color>#068711</Color>
+                            <Color>#bf2b20</Color>
+                            <Color>#757372</Color>
+                        </chart:ChartColorModel.CustomBrushes>
+                    </chart:ChartColorModel>
+                </chart:PieSeries.ColorModel>
+
+            </chart:PieSeries>
+        </chart:SfChart>
+    </StackLayout>
+</ContentPage>
